@@ -1,0 +1,16 @@
+FUNCTION palindrome(STR,d,f) : RETURN TRUE
+VAR
+    str : STRING ;
+    d,f : INTEGER ;
+BEGIN
+    IF (d = f) THEN 
+    RETURN TRUE ;
+    END_IF
+    IF (str[d] <> str[f]) THEN
+        RETURN FALSE ;
+    END_IF
+    IF (d < f) THEN
+        RETURN palindrome (str,d+1,f-1)
+    END_IF
+    RETURN TRUE
+END
